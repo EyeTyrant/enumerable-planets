@@ -13,5 +13,18 @@
         <li th:text="${planet.planetName}"></li>
     </ul>
 
+<div class="container">
+    <table class="table table-info table-striped text-white">
+        <tr class="bg-info">
+            <th>Planets</th>
+            <th>Year Length <br>(in Earth days)</th>
+        </tr>
+        <tr class="text-dark" th:each="planet : ${planets}">
+
+            <td th:text="${planet.planetName}"></td>
+            <td th:text="${planet.yearLength}"></td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>
