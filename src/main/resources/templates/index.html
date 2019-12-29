@@ -8,21 +8,21 @@
 
 </head>
 <body>
-<h1>Pick a planet:</h1>
-    <ul th:each="planet : ${planets}">
-        <li th:text="${planet.planetName}"></li>
-    </ul>
+<h1 class="text-center text-info text-uppercase">Pick a planet:</h1>
+
 
 <div class="container">
     <table class="table table-info table-striped text-white">
         <tr class="bg-info">
             <th>Planets</th>
             <th>Year Length <br>(in Earth days)</th>
+            <th>Number <br>of Moons</th>
         </tr>
         <tr class="text-dark" th:each="planet : ${planets}">
 
             <td th:text="${planet.planetName}"></td>
             <td th:text="${planet.yearLength}"></td>
+            <td th:text="${planet.numMoons}"></td>
         </tr>
     </table>
 </div>
